@@ -28,3 +28,21 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_bubble_sort_exceed_limit():
+    # REQ-03: If >= 10 numbers are entered, return 1
+    input_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    assert (result == 1)
+
+def test_bubble_sort_zero_length():
+    # REQ-04: If 0 numbers are entered, return 0
+    input_arr = []
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    assert result == 0
+
+def test_bubble_sort_non_integer():
+    # REQ-05: If any values entered are not integers, return 2
+    input_arr = [64, 34, 25, "12", 22]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    assert result == 2
