@@ -9,6 +9,7 @@ def total_cost_shopping():
     for key in price_list.keys():
         if key in quantity_list:
             # complete the implementation below:
+            total_cost += price_list[key] * quantity_list[key]
             pass  # replace this line with your code
 
     print("total cost = ", total_cost)
